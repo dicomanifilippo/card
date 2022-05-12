@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="features">  
+        <div class="feature">  
+         <a href="#" class="feature-content">  
+          <strong>Some feature</strong>  
+          <span>Description of the awesome feature</span>  
+         </a>  
+        </div>  
+        <div class="feature">  
+         <a href="#" class="feature-content">  
+          <strong>Some feature</strong>  
+          <span>Description of the awesome feature</span>  
+         </a>  
+        </div>  
+        <div class="feature">  
+         <a href="#" class="feature-content">  
+          <strong>Some feature</strong>  
+          <span>Description of the awesome feature</span>  
+         </a>  
+        </div>  
+        <div class="feature">  
+         <a href="#" class="feature-content">  
+          <strong>Some feature</strong>  
+          <span>Description of the awesome feature</span>  
+         </a>  
+        </div>  
+        <div class="feature">  
+         <a href="#" class="feature-content">  
+          <strong>Some feature</strong>  
+          <span>Description of the awesome feature</span>  
+         </a>  
+        </div>  
+        <div class="feature">  
+         <a href="#" class="feature-content">  
+          <strong>Some feature</strong>  
+          <span>Description of the awesome feature</span>  
+         </a>  
+        </div>  
+       </div>  
+
+       <script>
+           console.clear();  
+ const featuresEl = document.querySelector(".features");  
+ const featureEls = document.querySelectorAll(".feature");  
+ featuresEl.addEventListener("pointermove", (ev) => {  
+  featureEls.forEach((featureEl) => {  
+   // Not optimized yet, I know  
+   const rect = featureEl.getBoundingClientRect();  
+   featureEl.style.setProperty("--x", ev.clientX - rect.left);  
+   featureEl.style.setProperty("--y", ev.clientY - rect.top);  
+  });  
+ });  
+       </script>
+</body>
+</html>
